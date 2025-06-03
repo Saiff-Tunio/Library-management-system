@@ -5,7 +5,7 @@ def get_connection():
 
 
 def DatabaseCreate():
-    cnx = get_connection()
+    cnx = mysql.connector.connect(user='root', password='1234', host='localhost')
     Cursor = cnx.cursor()
     Cursor.execute("CREATE DATABASE IF NOT EXISTS Library")
     Cursor.execute("")
